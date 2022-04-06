@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import { graphql, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 type BlogPostTemplateProps = {
   data: any
@@ -16,6 +17,7 @@ const BlogPostTemplate: React.FC<BlogPostTemplateProps>  = ({
     <div className="blog-post-container">
       <div className="blog-post">
         <h1>{post.frontmatter.title}</h1>
+        <StaticImage src={post.frontmatter.image} alt="Car" placeholder="blurred" layout="fixed" />
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
