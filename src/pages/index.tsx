@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import * as React from "react"
 
 // styles
@@ -130,6 +131,9 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <div>
+        <Link to='/blog'>MY BLOGS</Link>
+      </div>
       <h1 style={headingStyles}>
         Congratulations
         <br />

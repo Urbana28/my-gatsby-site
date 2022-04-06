@@ -10,21 +10,36 @@ const config: GatsbyConfig = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", 
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
       "path": "./src/images/"
-    },
-    __key: "images"
-  }, {
+    }
+  }, 
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
       "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+    }
+  }, 
+  // {
+  //   resolve: 'gatsby-source-filesystem',
+  //   options: {
+  //     "name": 'markdown-pages',
+  //     "path": `${__dirname}/blog`
+  //   },
+  // }, 
+  // {
+  //   resolve: "gatsby-plugin-netlify-cms",
+  //   options: {
+  //     modulePath: `./src/cms/cms.js`,
+  //   },
+  // },
+  `gatsby-transformer-remark`
+  ]
 };
 
 export default config;
