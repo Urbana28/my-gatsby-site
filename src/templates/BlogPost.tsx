@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-//import { GatsbyImage, getImage, IGatsbyImageData, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, IGatsbyImageData, StaticImage } from "gatsby-plugin-image";
 
 type BlogPostTemplateProps = {
   data: any

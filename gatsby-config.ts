@@ -6,19 +6,29 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
+   `gatsby-plugin-netlify-cms`,
    { resolve: "gatsby-remark-relative-images-v2" },
    "gatsby-plugin-sass", "gatsby-plugin-image", 
-   "gatsby-plugin-sitemap", {
+   "gatsby-plugin-sitemap", 
+   {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
     }
   }, "gatsby-plugin-mdx",
+  // {
+  //   // keep as first gatsby-source-filesystem plugin for gatsby image support
+  //   resolve: "gatsby-source-filesystem",
+  //   options: {
+  //     path: `../../../public/assets`,
+  //     name: "uploads",
+  //   },
+  // },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
-      "path": "./src/images/"
+      "path": `./src/images/`
     }
   }, 
   "gatsby-plugin-sharp", "gatsby-transformer-sharp", 
@@ -26,7 +36,7 @@ const config: GatsbyConfig = {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
-      "path": "./src/pages/"
+      "path": `./src/pages/`
     }
   },  
   {
