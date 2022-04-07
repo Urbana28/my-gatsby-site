@@ -5,13 +5,15 @@ const config: GatsbyConfig = {
     title: `new`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-sass", "gatsby-plugin-image", 
+  plugins: [
+   { resolve: "gatsby-remark-relative-images-v2" },
+   "gatsby-plugin-sass", "gatsby-plugin-image", 
    "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", 
+  }, "gatsby-plugin-mdx",
   {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -27,12 +29,12 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     }
   },  
-  // {
-  //   resolve: "gatsby-plugin-netlify-cms",
-  //   options: {
-  //     modulePath: `./src/cms/cms.js`,
-  //   },
-  // },
+  {
+    resolve: "gatsby-plugin-netlify-cms",
+    options: {
+      modulePath: `./src/cms/cms.ts`,
+    },
+  },
   `gatsby-transformer-remark`
   ]
 };

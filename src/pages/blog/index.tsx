@@ -8,13 +8,15 @@ type BlogIndexPageProps = {
 
 const BlogIndexPage: React.FC<BlogIndexPageProps> = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
+
+  console.log(posts)
   
   return (
     <React.Fragment>
       <h1>Latest Posts</h1>
         <section>
           <div className="content">
-            {posts.map((post: any) => <div className="blog-post-preview" key={post.id}>
+            {posts.map((post: any, i: number) => <div key={i} className="blog-post-preview">
               <h1>
                 <Link to={post.node.frontmatter.path}>{post.node.frontmatter.title}</Link>
               </h1>
