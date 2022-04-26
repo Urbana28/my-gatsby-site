@@ -1,4 +1,0 @@
-backend:
-  name: gitlab
-  repo: website/repo
-  branch: GATSBY_CMS_BRANCH # Will be replaced during build with the current branch
