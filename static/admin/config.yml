@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Urbana28/my-gatsby-site
-  branch: GATSBY_CMS_BRANCH
+  branch: ${GATSBY_CMS_BRANCH}
 media_folder: static/assets
 public_folder: /assets
 collections:
