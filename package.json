@@ -11,7 +11,7 @@
         "pre": "chmod +x ./prebuild.sh && ./prebuild.sh",
         "develop": "gatsby develop",
         "start": "gatsby develop",
-        "build": "gatsby build",
+        "build": "cross-env GATSBY_CMS_BRANCH=main gatsby build",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
         "typecheck": "tsc --noEmit"
@@ -19,6 +19,7 @@
     "dependencies": {
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
+        "dotenv": "^16.0.0",
         "gatsby": "^4.11.1",
         "gatsby-plugin-image": "^2.11.1",
         "gatsby-plugin-manifest": "^4.11.1",
