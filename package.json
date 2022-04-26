@@ -8,6 +8,7 @@
         "gatsby"
     ],
     "scripts": {
+        "pre": "chmod +x ./prebuild.sh && ./prebuild.sh",
         "develop": "gatsby develop",
         "start": "gatsby develop",
         "build": "cross-env GATSBY_CMS_BRANCH=develop gatsby build",
@@ -18,6 +19,8 @@
     "dependencies": {
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
+        "cross-env": "7.0.3",
+        "dotenv": "^16.0.0",
         "gatsby": "^4.11.1",
         "gatsby-plugin-image": "^2.11.1",
         "gatsby-plugin-manifest": "^4.11.1",
@@ -31,6 +34,7 @@
         "gatsby-source-filesystem": "^4.11.1",
         "gatsby-transformer-remark": "^5.11.1",
         "gatsby-transformer-sharp": "^4.11.0",
+        "git-repo-info": "^2.1.1",
         "netlify-cms-app": "^2.15.70",
         "netlify-cms-media-library-cloudinary": "^1.3.10",
         "netlify-cms-media-library-uploadcare": "^0.5.10",

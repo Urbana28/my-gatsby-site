@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Urbana28/my-gatsby-site
-  branch: main
+  branch: GATSBY_CMS_BRANCH
 media_folder: static/assets
 public_folder: /assets
 collections:
@@ -15,6 +15,5 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: image, label: Image, widget: image, required: false }
-      - { name: body, label: Body, widget: markdown } 
-  
+      - { name: body, label: Body, widget: markdown }
 
