@@ -10,5 +10,4 @@ BRANCH="${USER_SET_BRANCH:-$DETECTED_BRANCH}"
 # Set branch on which the CMS edits files by creating
 # the netlify config from the netlify-cms-config and overwrite
 # the branch setting.
-yes | cp -rf ./netlify-cms-config.yml ./static/admin/config.yml
-sed -i -e "s|NETLIFY_CMS_BRANCH|$BRANCH|g" ./static/admin/config.yml
+sed -i -e "s|GATSBY_CMS_BRANCH|$BRANCH|g" ./static/admin/config.yml
