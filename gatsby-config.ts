@@ -43,7 +43,6 @@ const config: GatsbyConfig = {
   {
     resolve: "gatsby-plugin-netlify-cms",
     options: {
-      manualInit: true,
       modulePath: `./src/cms/cms.ts`,
     },
   },
