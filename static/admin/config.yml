@@ -15,7 +15,5 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: image, label: Image, widget: image, required: false }
-      - { name: body, label: Body, widget: markdown } 
-      - { name: test, label: Body, widget: markdown }
-      - { name: test12, label: Body, widget: markdown }
+      - { name: body, label: Body, widget: markdown }
 
