@@ -1,47 +1,49 @@
 {
-  "name": "my-gatsby-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "my-gatsby-site",
-  "author": "Urbana28",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "gatsby": "^4.11.1",
-    "gatsby-plugin-image": "^2.11.1",
-    "gatsby-plugin-manifest": "^4.11.1",
-    "gatsby-plugin-mdx": "^3.11.1",
-    "gatsby-plugin-netlify-cms": "^6.11.0",
-    "gatsby-plugin-sass": "^5.11.1",
-    "gatsby-plugin-sharp": "^4.11.1",
-    "gatsby-plugin-sitemap": "^5.11.1",
-    "gatsby-remark-relative-images": "^2.0.2",
-    "gatsby-remark-relative-images-v2": "^0.1.5",
-    "gatsby-source-filesystem": "^4.11.1",
-    "gatsby-transformer-remark": "^5.11.1",
-    "gatsby-transformer-sharp": "^4.11.0",
-    "netlify-cms-app": "^2.15.70",
-    "netlify-cms-media-library-cloudinary": "^1.3.10",
-    "netlify-cms-media-library-uploadcare": "^0.5.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.49.11"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.23",
-    "@types/react": "^17.0.43",
-    "@types/react-dom": "^17.0.14",
-    "typescript": "^4.6.3"
-  }
+    "name": "my-gatsby-site",
+    "version": "1.0.0",
+    "private": true,
+    "description": "my-gatsby-site",
+    "author": "Urbana28",
+    "keywords": [
+        "gatsby"
+    ],
+    "scripts": {
+        "prebuild": "chmod +x ./prebuild.sh && ./prebuild.sh",
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "gatsby": "^4.11.1",
+        "gatsby-plugin-image": "^2.11.1",
+        "gatsby-plugin-manifest": "^4.11.1",
+        "gatsby-plugin-mdx": "^3.11.1",
+        "gatsby-plugin-netlify-cms": "^6.11.0",
+        "gatsby-plugin-sass": "^5.11.1",
+        "gatsby-plugin-sharp": "^4.11.1",
+        "gatsby-plugin-sitemap": "^5.11.1",
+        "gatsby-remark-relative-images": "^2.0.2",
+        "gatsby-remark-relative-images-v2": "^0.1.5",
+        "gatsby-source-filesystem": "^4.11.1",
+        "gatsby-transformer-remark": "^5.11.1",
+        "gatsby-transformer-sharp": "^4.11.0",
+        "git-repo-info": "^2.1.1",
+        "netlify-cms-app": "^2.15.70",
+        "netlify-cms-media-library-cloudinary": "^1.3.10",
+        "netlify-cms-media-library-uploadcare": "^0.5.10",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "sass": "^1.49.11"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.23",
+        "@types/react": "^17.0.43",
+        "@types/react-dom": "^17.0.14",
+        "typescript": "^4.6.3"
+    }
 }

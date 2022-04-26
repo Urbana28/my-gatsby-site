@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: [
-   `gatsby-plugin-netlify-cms`,
+  //  `gatsby-plugin-netlify-cms`,
    { resolve: "gatsby-remark-relative-images-v2" },
    "gatsby-plugin-sass", "gatsby-plugin-image", 
    "gatsby-plugin-sitemap", 
@@ -42,6 +42,7 @@ const config: GatsbyConfig = {
   {
     resolve: "gatsby-plugin-netlify-cms",
     options: {
+      manualInit: true,
       modulePath: `./src/cms/cms.ts`,
     },
   },
