@@ -14,9 +14,9 @@ the netlify config from the netlify-cms-config and overwrite
 the branch setting.
 if [[ $BRUNCH == "main" ]]
 then
-  sed -i -e "s|$GATSBY_API|${GATSBY_PROD_API}|g" .env
+  sed -i -e "s|_GATSBY_API|${GATSBY_PROD_API}|g" .env
 else
-  sed -i -e "s|$GATSBY_API|${GATSBY_QA_API}|g" .env  #путь до файла с урлами
+  sed -i -e "s|_GATSBY_API|${GATSBY_QA_API}|g" .env  #путь до файла с урлами
 fi
 
 sed -i -e "s|GATSBY_CMS_BRANCH|$BRANCH|g" ./static/admin/config.yml
