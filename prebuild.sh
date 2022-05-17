@@ -12,6 +12,7 @@ BRANCH="${USER_SET_BRANCH:-$DETECTED_BRANCH}"
 # the branch setting.
 if [[ $BRUNCH = "main" ]]
 then
+  echo ${GATSBY_PROD_API}
   sed -i -e "s|GATSBY_API_ENDPOINT|${GATSBY_PROD_API}|g" ./netlify.toml
 else
   sed -i -e "s|GATSBY_API_ENDPOINT|${GATSBY_QA_API}|g" ./netlify.toml  #путь до файла с урлами
