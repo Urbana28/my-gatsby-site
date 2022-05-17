@@ -9,17 +9,16 @@ BRANCH="${USER_SET_BRANCH:-$DETECTED_BRANCH}"
 
 echo ${GATSBY_PROD_API}
 
-# Set branch on which the CMS edits files by creating
-# the netlify config from the netlify-cms-config and overwrite
-# the branch setting.
-# if [[ $BRUNCH == "main" ]]
-# then
-#   sed -i -e "s|GATSBY_API_ENDPOINT|${GATSBY_PROD_API}|g" ./netlify.toml
-# else
-#   sed -i -e "s|GATSBY_API_ENDPOINT|${GATSBY_QA_API}|g" ./netlify.toml  #путь до файла с урлами
-# fi
+Set branch on which the CMS edits files by creating
+the netlify config from the netlify-cms-config and overwrite
+the branch setting.
+if [[ $BRUNCH == "main" ]]
+then
+  sed -i -e "s|$GATSBY_API|${GATSBY_PROD_API}|g" .env
+else
+  sed -i -e "s|$GATSBY_API|${GATSBY_QA_API}|g" .env  #путь до файла с урлами
+fi
 
-sed -i "s|GATSBY_API_ENDPOINT|HELLO|g" netlify.toml
 sed -i -e "s|GATSBY_CMS_BRANCH|$BRANCH|g" ./static/admin/config.yml
 
 cat netlify.toml
