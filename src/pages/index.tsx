@@ -128,6 +128,7 @@ const links = [
 
 // markup
 const IndexPage = () => {
+  console.log("ENV VAR", process.env.GATSBY_API)
   return (
     <main style={pageStyles}>
       <title>Home Page</title>

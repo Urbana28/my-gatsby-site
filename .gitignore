@@ -2,3 +2,5 @@ node_modules/
 .cache/
 public
 .DS_store
+.env.production
+.env.development

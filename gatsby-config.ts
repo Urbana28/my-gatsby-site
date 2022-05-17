@@ -17,6 +17,12 @@ const config: GatsbyConfig = {
     }
   }, "gatsby-plugin-mdx",
   {
+    resolve: `gatsby-plugin-env-variables`,
+    options: {
+      allowList: ["GATSBY_CMS_BRANCH"]
+    },
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
