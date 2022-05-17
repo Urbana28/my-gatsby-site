@@ -1,6 +1,6 @@
 [build]
   publish = "public/"
-  command = "npm run pre -- $HEAD && npm run build"
+  command = "sed -i "s|GATSBY_API_ENDPOINT|HELLO|g" netlify.toml npm run pre -- $HEAD && npm run build"
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts

@@ -19,7 +19,7 @@ const config: GatsbyConfig = {
   {
     resolve: `gatsby-plugin-env-variables`,
     options: {
-      allowList: ["GATSBY_CMS_BRANCH"]
+      allowList: ["GATSBY_CMS_BRANCH", "GATSBY_API"]
     },
   },
   {
