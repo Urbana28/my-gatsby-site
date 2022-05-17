@@ -7,11 +7,11 @@
   package = "@netlify/plugin-lighthouse"
 
 [context.production]
-  environment = { NODE_VERSION = "14.15.3", GATSBY_API = 'GATSBY_PROD_API' }
+  environment = { NODE_VERSION = "14.15.3", GATSBY_API = 'GATSBY_API_ENDPOINT' }
 
 # Branch Deploy context: all deploys that are not from
 # a pull/merge request or from the Production branch 
 # will inherit these settings.
 [context.branch-deploy.environment]
   NODE_ENV = "development"
-  GATSBY_API = 'GATSBY_QA_API'
+  GATSBY_API = 'GATSBY_API_ENDPOINT'
