@@ -19,7 +19,7 @@ echo ${GATSBY_PROD_API}
 #   sed -i -e "s|GATSBY_API_ENDPOINT|${GATSBY_QA_API}|g" ./netlify.toml  #путь до файла с урлами
 # fi
 
-sed -i -e "s|GATSBY_API_ENDPOINT|HELLO|g" netlify.toml
+sed -i "s|GATSBY_API_ENDPOINT|HELLO|g" netlify.toml
 sed -i -e "s|GATSBY_CMS_BRANCH|$BRANCH|g" ./static/admin/config.yml
 
 cat netlify.toml
