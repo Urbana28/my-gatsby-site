@@ -12,7 +12,7 @@ echo ${GATSBY_PROD_API}
 Set branch on which the CMS edits files by creating
 the netlify config from the netlify-cms-config and overwrite
 the branch setting.
-if [[ $BRUNCH == "main" ]]
+if [[ $BRUNCH = "main" ]]
 then
   sed -i -e "s|_GATSBY_API|${GATSBY_PROD_API}|g" .env
 else
